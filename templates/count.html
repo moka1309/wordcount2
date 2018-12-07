@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Count Page</h1>
+    <a href="{% url 'about' %}">ABOUT</a><br />
+    <h2>Total number of words in your list: {{count}}</h2>
+    <h2>Your Text: </h2>
+    <p>{{fulltext}}</p>
+    <br>
+    <h2>List of Words</h2>
+    {% for word, total in sorted_words %}
+    <b>{{word}} = {{total}}</b><br>
+    {%endfor%}
+  </body>
+</html>
